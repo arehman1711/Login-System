@@ -1,5 +1,5 @@
 # Use the official OpenJDK 17 image as the base image
-FROM adoptopenjdk:17-jdk-hotspot
+FROM openjdk:17-alpine
 
 # Set the working directory in the container
 WORKDIR /app
@@ -13,6 +13,7 @@ RUN mvn dependency:go-offline -B
 # Copy the project source code to the container
 COPY src ./src
 
+COPY --from=build /target/demo-0.0.1-SNAPSHOT.jar demo.jar
 # Build the application
 RUN mvn package -DskipTests
 

@@ -1,20 +1,16 @@
-# Use the official OpenJDK 17 image as the base image
-FROM openjdk:17-alpine
-
-# Set the working directory in the container
+#
+# Build stage
+#
+FROM maven:3.8.3-openjdk-17 AS build
 WORKDIR /app
+COPY . /app/
+RUN mvn clean package
 
-# Copy the Maven project file to the working directory
-COPY pom.xml .
-
-# Download the project dependencies
-RUN mvn dependency:go-offline -B
-
-# Copy the project source code to the container
-COPY src ./src
-
-# Build the application
-RUN mvn package -DskipTests
-
-# Set the entrypoint command to run the Spring Boot application
-ENTRYPOINT ["java", "-jar", "target/your-app.jar"]
+#
+# Package stage
+#
+FROM openjdk:17-alpine
+WORKDIR /app
+COPY --from=build /app/target/*.jar /app/app.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","app.jar"]

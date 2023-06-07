@@ -13,7 +13,6 @@ RUN mvn dependency:go-offline -B
 # Copy the project source code to the container
 COPY src ./src
 
-COPY --from=build /target/demo-0.0.1-SNAPSHOT.jar demo.jar
 # Build the application
 RUN mvn package -DskipTests
 

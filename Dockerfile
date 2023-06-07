@@ -1,20 +1,16 @@
-# Use the official OpenJDK 17 image as the base image
-FROM openjdk:17-alpine
-
-# Set the working directory in the container
+FROM maven:3.8.1-openjdk-17-slim AS builder   # <-- Include Maven
 WORKDIR /app
-
-# Copy the Maven project file to the working directory
-COPY pom.xml .
-
-# Download the project dependencies
-RUN mvn dependency:go-offline -B
-
-# Copy the project source code to the container
+COPY pom.xml ./
 COPY src ./src
 
-# Build the application
-RUN mvn package -DskipTests
+RUN mvn clean install
 
-# Set the entrypoint command to run the Spring Boot application
-ENTRYPOINT ["java", "-jar", "target/your-app.jar"]
+# Second stage: Minimal runtime environment
+FROM eclipse-temurin:17-jre-jammy
+WORKDIR /app
+
+# copy jar from the first stage
+COPY --from=builder /app/target/*.jar /app/app.jar
+
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "/app/app.jar"]

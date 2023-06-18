@@ -12,11 +12,11 @@
 
 <div>
     <span th:if="!${session.name}">
-       <section  th:replace="/common-features/header::header">
+       <section  th:replace="~{/common-features/header::header}">
       </section>
     </span>
     <span th:if="${session.name}">
-       <section  th:replace="/common-features/Session-Header::header">
+       <section  th:replace="~{/common-features/Session-Header::header}">
       </section>
     </span>
 </div>
@@ -53,7 +53,7 @@
     </section>
 </main>
 <div>
-    <section th:replace="/common-features/footer::footer"></section>
+    <section th:replace="~{/common-features/footer::footer}"></section>
 </div>
 <script>
 var alertElement = document.getElementById('successAlert');

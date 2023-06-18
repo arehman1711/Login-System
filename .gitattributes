@@ -2,3 +2,4 @@
 * text=auto
 *.bat           text eol=crlf
 mvnw            text eol=lf
+.text

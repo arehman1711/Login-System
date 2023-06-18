@@ -41,6 +41,7 @@ alert {
       position: relative;
       padding-left: 30px; /* Adjust the padding to position the icon */
     }
+<<<<<<< HEAD
  .slideshow-container {
    position: relative;
     width: 100vw;
@@ -71,3 +72,6 @@ alert {
  .slide.active {
    opacity: 1;
  }
+=======
+
+>>>>>>> phase-1

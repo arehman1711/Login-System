@@ -6,7 +6,11 @@ import lombok.*;
 
 @Data
 @Entity
+<<<<<<< HEAD
 @Table(name = "user")
+=======
+@Table(name = "student")
+>>>>>>> phase-1
 public class User {
 
 	@Id

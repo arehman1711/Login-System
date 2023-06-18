@@ -9,11 +9,26 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+<<<<<<< HEAD
+=======
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+>>>>>>> phase-1
 @Slf4j
 @Controller
 public class login {
     @Autowired
     private UserService userService;
+<<<<<<< HEAD
+=======
+    @GetMapping("/Home")
+    public String Home(Model model) {
+        return "index";
+    }
+
+>>>>>>> phase-1
     @GetMapping("/signup")
     public String signup(Model model) {
         model.addAttribute("title", "Sign Up");
@@ -24,7 +39,11 @@ public class login {
     @GetMapping("/login")
     public String login()
     {
+<<<<<<< HEAD
         System.out.println("Inside the Login Page");
+=======
+        log.info("Inside the Login Page");
+>>>>>>> phase-1
         return "login";
     }
 
@@ -75,6 +94,10 @@ public class login {
         model.addAttribute("info", "Welcome "+ dbUser.getName() + "!");
         model.addAttribute("success", "User registered successfully.");
         log.info("User "+ dbUser.getName() + " successfully Registered.");
+<<<<<<< HEAD
+=======
+
+>>>>>>> phase-1
         return "Index";
     }
 

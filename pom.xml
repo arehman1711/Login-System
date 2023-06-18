@@ -58,7 +58,6 @@
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
->>>>>>> phase-1
 
     </dependencies>
 

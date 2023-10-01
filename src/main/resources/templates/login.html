@@ -12,19 +12,19 @@
 
 <div>
     <span th:if="!${session.name}">
-<<<<<<< HEAD
+
        <section  th:replace="/common-features/header::header">
       </section>
     </span>
     <span th:if="${session.name}">
        <section  th:replace="/common-features/Session-Header::header">
-=======
+
        <section  th:replace="~{/common-features/header::header}">
       </section>
     </span>
     <span th:if="${session.name}">
        <section  th:replace="~{/common-features/Session-Header::header}">
->>>>>>> phase-1
+
       </section>
     </span>
 </div>
@@ -45,35 +45,35 @@
                          <h6 class="fas fa-exclamation-circle" th:text= "${error}" ></h6>
                        </div>
                       </span>
-                <div class="relative mb-4">
-                    <label for="email_field" class="leading-7 text-sm text-gray-600">Email</label>
-                    <input type="email" id="email_field" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
-                </div>
-                <div class="relative mb-4">
-                    <label for="password" class="leading-7 text-sm text-gray-600">Password</label>
-                    <input type="password" id="password" name="password" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
-                </div>
-                <button type="submit" class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Login</button>
-                <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
+                    <div class="relative mb-4">
+                        <label for="email_field" class="leading-7 text-sm text-gray-600">Email</label>
+                        <input type="email" id="email_field" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+                    </div>
+                    <div class="relative mb-4">
+                        <label for="password" class="leading-7 text-sm text-gray-600">Password</label>
+                        <input type="password" id="password" name="password" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+                    </div>
+                    <button type="submit" class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Login</button>
+                    <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.</p>
                 </form>
             </div>
         </div>
     </section>
 </main>
 <div>
-<<<<<<< HEAD
-    <section th:replace="/common-features/footer::footer"></section>
-=======
+
+
+
     <section th:replace="~{/common-features/footer::footer}"></section>
->>>>>>> phase-1
+
 </div>
 <script>
-var alertElement = document.getElementById('successAlert');
+    var alertElement = document.getElementById('successAlert');
 
-// Set a timeout to hide the alert after a specified number of milliseconds (e.g., 3000 milliseconds = 3 seconds)
-setTimeout(function() {
-alertElement.style.display = 'none';
-}, 3000); // Adjust the time interval as needed
+    // Set a timeout to hide the alert after a specified number of milliseconds (e.g., 3000 milliseconds = 3 seconds)
+    setTimeout(function() {
+        alertElement.style.display = 'none';
+    }, 3000); // Adjust the time interval as needed
 </script>
 </body>
 </html>

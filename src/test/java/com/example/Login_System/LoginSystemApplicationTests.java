@@ -1,10 +1,10 @@
-package com.example.LearningKart;
+package com.example.Login_System;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LearningKartApplicationTests {
+class LoginSystemApplicationTests {
 
     @Test
     void contextLoads() {

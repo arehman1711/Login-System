@@ -1,4 +1,4 @@
-package com.example.LearningKart.entities;
+package com.example.Login_System.entities;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
@@ -6,11 +6,11 @@ import lombok.*;
 
 @Data
 @Entity
-<<<<<<< HEAD
+
 @Table(name = "user")
-=======
-@Table(name = "student")
->>>>>>> phase-1
+
+
+
 public class User {
 
 	@Id

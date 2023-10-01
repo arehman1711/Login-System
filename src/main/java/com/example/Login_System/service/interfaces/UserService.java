@@ -1,7 +1,7 @@
-package com.example.LearningKart.service.interfaces;
+package com.example.Login_System.service.interfaces;
 
 
-import com.example.LearningKart.entities.User;
+import com.example.Login_System.entities.User;
 
 public interface UserService {
 

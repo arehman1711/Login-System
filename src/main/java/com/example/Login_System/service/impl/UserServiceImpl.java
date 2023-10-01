@@ -1,9 +1,9 @@
-package com.example.LearningKart.service.impl;
+package com.example.Login_System.service.impl;
 
 
-import com.example.LearningKart.entities.User;
-import com.example.LearningKart.repository.UserRepository;
-import com.example.LearningKart.service.interfaces.UserService;
+import com.example.Login_System.entities.User;
+import com.example.Login_System.repository.UserRepository;
+import com.example.Login_System.service.interfaces.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
             user.setId(dbUser.getId());
             user.setName(dbUser.getName());
             user.setRole(dbUser.getRole());
-           return true;
+            return true;
         }
         return false;
     }

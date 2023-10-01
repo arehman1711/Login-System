@@ -1,10 +1,7 @@
-package com.example.LearningKart.controller;
-
-
-
-import com.example.LearningKart.entities.ContactUs;
-import com.example.LearningKart.entities.User;
-import com.example.LearningKart.repository.ContactUsRepository;
+package com.example.Login_System.controller;
+import com.example.Login_System.entities.ContactUs;
+import com.example.Login_System.entities.User;
+import com.example.Login_System.repository.ContactUsRepository;
 import jakarta.servlet.http.HttpSession;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;

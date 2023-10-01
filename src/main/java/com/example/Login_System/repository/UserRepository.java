@@ -1,7 +1,7 @@
-package com.example.LearningKart.repository;
+package com.example.Login_System.repository;
 
 
-import com.example.LearningKart.entities.User;
+import com.example.Login_System.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

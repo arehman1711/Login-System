@@ -12,8 +12,8 @@
 <div>
     <span th:if="!${session.name}">
 
-       <section  th:replace="~{/common-features/header::header}">
-      </section>
+<!--       <section  th:replace="~{/common-features/header::header}">-->
+<!--      </section>-->
     </span>
     <span th:if="${session.name}">
        <section  th:replace="~{/common-features/Session-Header::header}">

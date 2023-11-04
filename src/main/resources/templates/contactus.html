@@ -11,14 +11,13 @@
 <body>
 <div>
     <span th:if="!${session.name}">
-       <section  th:replace="~{/Header::header}">
+       <section  th:insert="Header::header">
       </section>
     </span>
     <span th:if="${session.name}">
 
-       <section  th:replace="~{/Session-Header::header}">
+       <section  th:insert="Session-Header::header">
 
-       <section  th:replace="~{/Session-Header::header}">
 
       </section>
     </span>
@@ -92,8 +91,7 @@
 <div>
 
 
-
-    <section th:replace="~{/footer::footer}"></section>
+    <section th:replace="footer::footer"></section>
 
 </div>
 <script>

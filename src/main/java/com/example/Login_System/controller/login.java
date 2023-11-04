@@ -84,7 +84,7 @@ public class login {
         model.addAttribute("success", "User registered successfully.");
         log.info("User "+ dbUser.getName() + " successfully Registered.");
 
-        return "Index";
+        return "index";
     }
 
 }

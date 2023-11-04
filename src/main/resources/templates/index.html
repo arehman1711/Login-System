@@ -9,19 +9,19 @@
     <script th:src="@{/js/script.js}"></script>
 </head>
 <body>
-<!--<div>-->
-<!--    <span th:if="!${session.name}">-->
+<div>
+    <span th:if="!${session.name}">
 
-<!--&lt;!&ndash;       <section  th:replace="~{/common-features/header::header}">&ndash;&gt;-->
-<!--&lt;!&ndash;      </section>&ndash;&gt;-->
-<!--    </span>-->
-<!--    <span th:if="${session.name}">-->
-<!--       <section  th:replace="~{/common-features/Session-Header::header}">-->
+       <section  th:replace="~{/common-features/header::header}">
+      </section>
+    </span>
+    <span th:if="${session.name}">
+       <section  th:replace="~{/common-features/Session-Header::header}">
 
-<!--      </section>-->
-<!--    </span>-->
+      </section>
+    </span>
 
-<!--</div>-->
+</div>
 <main>
     <section class="text-gray-600 body-font">
     <span th:if="${success}">
